@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  suzyhelpdesk:
+    build: .
+    container_name: suzyhelpdesk
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY}
+    restart: unless-stopped

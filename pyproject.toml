@@ -1,0 +1,19 @@
+[project]
+name = "SuzyHelpdesk"
+version = "0.1.0"
+description = "Система для удобного поиска по документу."
+authors = [
+    { name = "Kairat", email = "zhaksylykov.k06@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+dependencies = [
+    "langchain>=0.2.0",
+    "langgraph>=0.0.30",
+    "python-dotenv",
+    "uvicorn",
+    "pydantic",
+    "fastapi"
+]

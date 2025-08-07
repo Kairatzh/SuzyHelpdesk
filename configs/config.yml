@@ -1,0 +1,10 @@
+project:
+  name: SuzyHelpdesk
+  version: 1.0.0
+
+together:
+  model: ""
+  together_api_key: ${TOGETHER_API_KEY}
+  max_tokens: 500
+  temperature: 0.5
+
