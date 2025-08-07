@@ -19,16 +19,13 @@ class AgentGraph:
         graph.add_node("create_vector_store", create_vector_store_tool)
         graph.add_node("retrieve_information", retrieve_information_tool)
         graph.add_node("llm", ask_llm_tool)
-        graph.add_node("router_cdb", RunnableLambda(router_cdb))
 
         graph.set_entry_point("start")
 
-        graph.add_edge("start", "router_cdb")
-
         graph.add_conditional_edges(
-            source="router_cdb",
-            path=router_cdb,
-            path_map={
+            "start",
+            router_cdb,
+            {
                 "create_vector_store": "create_vector_store",
                 "llm": "llm"
             }
@@ -58,4 +55,5 @@ logger.info("Граф агентов успешно визуализирован
 if __name__ == "__main__":
     state = State(query="Что такое хромосома?", user_id="111")
     result = agent_graph.run(state=state)
+    print(result)
     logger.info(f"Результат выполнения графа: {result}")
