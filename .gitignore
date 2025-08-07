@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.pyc
+**/__pycache__/
+
+# Virtual environment
+.venv/
+
+# Environment variables
+.env
+
+# VSCode settings
+.vscode/
+
+# Idea settings
+.idea/
+
+# Generated files
+graph.png
