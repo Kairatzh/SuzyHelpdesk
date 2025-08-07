@@ -11,8 +11,8 @@ from utils.states import State
 
 # Initialize the LLM with Together and output parser
 llm = Together(
-    model="",
-    together_api_key="",
+    model="Qwen/Qwen3-235B-A22B-Thinking-2507",
+    together_api_key="8fb4509e710af87745bc5853b76aae0d79defcdf7420d3611d026060f48809df",
     temperature=0.5,
     max_tokens=300
 )
@@ -35,5 +35,5 @@ def retrieve_information_tool(state: State) -> State:
 #TOOL for asking LLM
 def ask_llm_tool(state: State) -> State:
     chain = prompt_llm | llm | output_parser
-    answer = chain.invoke({"question": state.query})
-    return State(query=state.query, answer=answer, context="")
+    answer = chain.invoke({"query": state.query})
+    return State(query=state.query, answer=answer)

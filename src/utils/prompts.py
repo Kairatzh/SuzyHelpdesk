@@ -14,6 +14,6 @@ prompt_rag = PromptTemplate(
 prompt_llm_template = "Ты ассистент, который отвечает на вопросы.Если ты не можешь ответить на вопрос, скажи, что не знаешь ответа. Вопрос: {query}, Твой ответ:"
 prompt_template_llm = prompt_llm_template
 prompt_llm = PromptTemplate(
-    input_variables=["question"],
+    input_variables=["query"],
     template=prompt_template_llm
 )
