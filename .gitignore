@@ -1,19 +1,17 @@
-# Python cache
+#Python cache
 __pycache__/
 *.pyc
 **/__pycache__/
 
-# Virtual environment
+#venv
 .venv/
 
-# Environment variables
+#env ans secrets
 .env
 
-# VSCode settings
+#ide settings
 .vscode/
-
-# Idea settings
 .idea/
 
-# Generated files
+#Generated files
 graph.png
